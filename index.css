@@ -1,0 +1,136 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #1a73e8, #4a90e2);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    padding-left: 150px;
+}
+
+/* ===== Navigation ===== */
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #1a73e8;
+    transform: scale(1.05);
+}
+
+/* ===== Sections ===== */
+section {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px 30px;
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+section h2 {
+    border-bottom: 3px solid #1a73e8;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+/* ===== Info Blocks (Schools, Hobbies, Work) ===== */
+.schools, .hobbies, .work {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f4ff;
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.schools:hover, .hobbies:hover, .work:hover {
+    background-color: #dce6ff;
+}
+
+.schools p:first-child,
+.work p:first-child {
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+    header img {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        padding-left: 0;
+        font-size: 1.2rem;
+    }
+
+    nav li {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+}
